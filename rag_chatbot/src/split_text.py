@@ -2,6 +2,7 @@ import re
 import nltk
 from nltk.tokenize import sent_tokenize
 from pathlib import Path
+import json
 
 def split_into_chunks(text, chunk_size=300):
     """Splits text into meaningful chunks based on headings and sentence boundaries."""
@@ -34,7 +35,7 @@ def split_into_chunks(text, chunk_size=300):
     return chunks
 
 def process_and_save_chunks(input_path, output_dir="processed_data", chunk_size=300):
-    """Reads cleaned text, splits it into chunks, and saves them."""
+    """Reads cleaned text, splits it into chunks, and saves them as JSON."""
     
     input_path = Path(input_path)
     output_dir = Path(output_dir)
@@ -43,11 +44,11 @@ def process_and_save_chunks(input_path, output_dir="processed_data", chunk_size=
     text = input_path.read_text(encoding="utf-8")
     chunks = split_into_chunks(text, chunk_size)
 
-    output_file = output_dir / f"chunks_{input_path.stem}.txt"
+    # Save chunks as JSON
+    output_file = output_dir / "chunks.json"
     with open(output_file, "w", encoding="utf-8") as f:
-        for i, chunk in enumerate(chunks):
-            f.write(f"\n[Chunk {i+1}]\n{chunk}\n")
-    
+        json.dump(chunks, f, indent=4, ensure_ascii=False)
+
     print(f"✅ Chunked text saved to {output_file}")
 
 if __name__ == "__main__":
