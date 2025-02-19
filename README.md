@@ -31,6 +31,7 @@ This project is a Retrieval-Augmented Generation (RAG) Chatbot designed to proce
 NOTE: Due to proprietary reasons, cannot share the document/PDF to public. Please use your own PDF as input, OpenAI API Key and Pinecone API to test.
 
 ## Project structure:
+```
 rag_chatbot/
 │── data/                   # Stores raw PDFs  
 │── processed_data/         # Stores cleaned text files  
@@ -46,7 +47,7 @@ rag_chatbot/
 │── requirements.txt            # Python dependencies
 │── example_workflow_OCR.py     # Example of OCR usage
 │── README.md                   # Project documentation 
-
+```
 
 ---
 ## Detailed Steps
