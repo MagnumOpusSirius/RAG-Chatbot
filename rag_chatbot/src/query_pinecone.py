@@ -1,13 +1,13 @@
 import os
 import pinecone
 import openai
-from dotenv import load_dotenv  # Load .env variables
+from dotenv import load_dotenv 
 
 # Load environment variables from .env file
 load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = os.getenv("PINECONE_ENVIRONMENT")  # Example: "gcp-starter"
-PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")  # Your index name
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")  # find tje index name in Pinecone when you create it
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Initialize Pinecone client (NEW v3+ method)
 pc = pinecone.Pinecone(api_key=PINECONE_API_KEY)

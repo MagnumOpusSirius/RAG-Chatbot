@@ -4,6 +4,12 @@ from pdf2image import convert_from_path
 from pathlib import Path
 
 def extract_text_from_pdf(pdf_path, output_dir="processed_data"):
+    """_summary_
+
+    Args:
+        pdf_path (_type_): _description_
+        output_dir (str, optional): _description_. Defaults to "processed_data".
+    """
     pdf_path = Path(pdf_path)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

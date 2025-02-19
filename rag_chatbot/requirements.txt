@@ -1,2 +1,26 @@
-nltk
+# Core dependencies
+python-dotenv==1.0.0         # For managing API keys & environment variables
+PyMuPDF==1.23.7             # PDF text extraction (fitz)
+pdfplumber==0.10.2          # Alternative PDF extraction (tables & text)
+pytesseract==0.3.10         # OCR for scanned PDFs (requires Tesseract installed)
+opencv-python==4.9.0.80     # Image processing (for OCR preprocessing)
+numpy==1.26.3               # Numerical operations
 
+# Text processing & chunking
+nltk==3.8.1                 # Natural language processing
+sentence-transformers==2.2.2 # BERT-based embeddings
+tiktoken==0.5.2             # Tokenization for GPT models
+
+# Vector database
+pinecone-client==3.0.0      # Pinecone for vector storage & retrieval
+
+# OpenAI API
+openai==1.11.1              # GPT-4 & embeddings API
+
+# Web framework (Don't have a client facing frontend yet: might use FastAPI-based chatbot)
+fastapi==0.110.0            # Web API framework
+uvicorn==0.27.1             # ASGI server for FastAPI
+
+# Extra utilities
+scikit-learn==1.4.1.post1   # TF-IDF, BM25, and other NLP techniques
+torch==2.1.2               # Required for sentence-transformers

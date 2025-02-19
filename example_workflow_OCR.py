@@ -21,7 +21,7 @@ def extract_text_from_pdf(pdf_path):
     return extracted_text
 
 
-# Step 2: Extract images from PDF and apply OCR
+# Step 2: Extracting images from PDF and applying OCR
 def extract_images_and_ocr(pdf_path, output_folder):
     """
     Extract images from PDF and apply OCR to extract text.
@@ -91,7 +91,7 @@ def process_mixed_pdf(pdf_path, output_folder, output_text_file):
 # Run the mixed PDF processing pipeline
 if __name__ == "__main__":
     # Input PDF file
-    pdf_path = "multithreading.pdf"  # Replace with your PDF file path
+    pdf_path = "multithreading.pdf"  # could change input file
 
     # Output folder for extracted images
     output_folder = "extracted_images"
